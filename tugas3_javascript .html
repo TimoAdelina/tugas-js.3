@@ -1,0 +1,92 @@
+<script>
+    //set grade A - E (menggunakan if multi kondisi)
+let nilai=prompt("masukkan nilai");
+let grade="";
+    if (nilai>=90 && nilai<=100 ){
+        grade="A"
+    }
+    else if(nilai>=80 && nilai<=89){
+        grade="B"
+    }
+    else if(nilai>=70 && nilai<=79){
+        grade="C"
+    }
+    else if(nilai>=60 && nilai<=69){
+        grade="D"
+    }
+    else if (nilai>=0 && nilai<=59){
+        grade="E"
+    }
+    else{
+        grade="kosong";
+    }
+    alert ('grade anda'+ " "+grade);
+    
+</script>
+<script>
+    //set predikat (menggunakan swtich case)
+    var jawab= prompt('masukkan grade anda');
+    let predikat="";
+    switch (jawab){
+    case "A":
+    predikat="sangat baik";
+    break;
+    case "B":
+    predikat="baik";
+    break;
+    case "C":
+    predikat="cukup";
+    break;
+    case "D":
+    predikat="kurang";12
+
+    break;
+    case "E":
+    predikat="sangat kurang";
+    break;
+default:
+    predikat="";
+    break;
+    }
+    alert("predikat anda"+ " " +predikat);
+
+</script>
+
+
+<!-- set warna warni table menggunakan looping -->
+<h2>
+    <table style="padding: 10; text-align: center; width: 100%;">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Nilai</th>
+                <th>Grade</th>
+                <th>Predikat</th>
+            </tr>
+        </thead>
+<tbody>
+
+
+<script>
+    var no,warna;
+    var NILAI=["90-100","80-89","70-79","60-69","0-59"];
+    var GRADE=["A","B","C","D","E"];
+    var PREDIKAT=["sangat baik","baik","cukup","kurang","sangat kurang"];
+
+    for (no=1;no<=5;no++){
+        warna=(no%2==0 ? "red":"blue");
+        document.write(`<tr bgcolor="${warna}">
+                <td>${no}</td>
+                <td> ${nilai[no-1]}</td>
+                <td> ${GRADE[no-1]}</td>
+                <td> ${PREDIKAT[no-1]}</td>
+            </tr>`);
+
+    }
+
+</script>
+
+</tbody>
+</table>
+</h2>
+
